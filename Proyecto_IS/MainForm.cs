@@ -28,20 +28,18 @@ namespace Proyecto_IS
 
         }
 
-        
-        private readonly string _rol;          
+        private readonly string _rol;
         private readonly string _nombre;
         private readonly int _usuarioId;
 
-         
-        private static readonly Color ColorHeader = Color.FromArgb(255, 255, 255);      
-        private static readonly Color ColorMenu = Color.FromArgb(248, 249, 250);        
-        private static readonly Color ColorFondoContenido = Color.FromArgb(235, 238, 245); 
-        private static readonly Color ColorAccent = Color.FromArgb(123, 97, 255);       
-        private static readonly Color ColorHover = Color.FromArgb(220, 215, 255);       
-        private static readonly Color ColorTextoPrincipal = Color.FromArgb(40, 40, 40); 
+        private static readonly Color ColorHeader = Color.FromArgb(255, 255, 255);
+        private static readonly Color ColorMenu = Color.FromArgb(248, 249, 250);
+        private static readonly Color ColorFondoContenido = Color.FromArgb(235, 238, 245);
+        private static readonly Color ColorAccent = Color.FromArgb(123, 97, 255);
+        private static readonly Color ColorHover = Color.FromArgb(220, 215, 255);
+        private static readonly Color ColorTextoPrincipal = Color.FromArgb(40, 40, 40);
 
-        
+
         public MainForm(int usuarioId, string nombre, string rol)
         {
             _usuarioId = usuarioId;
@@ -50,7 +48,7 @@ namespace Proyecto_IS
 
             InitializeComponent();
             ConfigurarVentana();
-            ConstruirMenu();
+            ConfigurarMenu();
             ActualizarBienvenida();
 
             IdiomaManager.GetInstance().RegisterObserver(this);
@@ -65,97 +63,70 @@ namespace Proyecto_IS
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Font = new Font("Segoe UI", 9.5f, FontStyle.Regular);
 
-            
             panelHeader.BackColor = ColorHeader;
-            panelMenu.BackColor = ColorMenu;
-            panelContenido.BackColor = ColorFondoContenido;
+            // panelMenu ya no se usa para armar botones (eso lo hace ahora
+            // el MenuStrip de arriba). Si no lo estás usando para nada más,
+            // lo podés sacar del Designer; si lo dejaste, no molesta.
 
-            
             lblAppNombre.ForeColor = ColorAccent;
         }
 
-        
-        private void ConstruirMenu()
+
+        private void ConfigurarMenu()
         {
-            panelMenu.Controls.Clear();
-
-            panelMenu.Controls.Add(lblRol);
-            panelMenu.Controls.Add(lblBienvenida);
-
-            int y = 100; 
-
-            string segAdmin = IdiomaManager.GetInstance().GetTexto(this.Name, "segAdministracion");
-
-            
             bool canGestionUsuarios = SessionManager_65RD.Instancia.TienePermiso("Gestión de Usuarios");
             bool canBitacora = SessionManager_65RD.Instancia.TienePermiso("Ver Bitácora");
             bool canGestionRoles = SessionManager_65RD.Instancia.TienePermiso("Gestión de Perfiles");
             bool canGestionFamilias = SessionManager_65RD.Instancia.TienePermiso("Gestión de Familias");
             bool canRespaldo = SessionManager_65RD.Instancia.TienePermiso("Gestión de Respaldo");
 
+            mnuGestionUsuarios.Visible = canGestionUsuarios;
+            mnuBitacora.Visible = canBitacora;
+            mnuGestionPerfiles.Visible = canGestionRoles;
+            mnuGestionFamilias.Visible = canGestionFamilias;
+            mnuGestionRespaldo.Visible = canRespaldo;
+            mnuAdministracion.Visible = canGestionUsuarios || canBitacora || canGestionRoles
+                                      || canGestionFamilias || canRespaldo;
 
-            if (canGestionUsuarios || canBitacora || canGestionRoles || canGestionFamilias)
-            {
-                AgregarSeparador(segAdmin, ref y);
-            }
+            bool canProductos = SessionManager_65RD.Instancia.TienePermiso("Gestión de Productos");
+            bool canClientes = SessionManager_65RD.Instancia.TienePermiso("Gestión de Clientes");
 
-            
-            if (canGestionUsuarios)
-            {
-                string btnGestion = IdiomaManager.GetInstance().GetTexto(this.Name, "btnGestionUsuarios");
-                AgregarBoton("👤  " + btnGestion, ref y, AbrirGestionUsuarios);
-            }
+            mnuMaestroProductos.Visible = canProductos;
+            mnuMaestroClientes.Visible = canClientes;
+            mnuMaestros.Visible = canProductos || canClientes;
 
-            if (canBitacora)
-            {
-                string btnBitacora = IdiomaManager.GetInstance().GetTexto(this.Name, "btnBitacoraEventos");
-                AgregarBoton("📋  " + btnBitacora, ref y, AbrirBitacora);
-            }
+            bool canCarrito = SessionManager_65RD.Instancia.TienePermiso("Carga de Carrito");
+            bool canFacturar = SessionManager_65RD.Instancia.TienePermiso("Facturación");
 
-            if (canGestionRoles)
-            {
-                string btnGestionPerfiles = IdiomaManager.GetInstance().GetTexto(this.Name, "btnMenuPerfiles");
-                AgregarBoton("⚙️  " + btnGestionPerfiles, ref y, AbrirGestionRoles);
-            }
+            mnuCarrito.Visible = canCarrito;
+            mnuFacturar.Visible = canFacturar;
+            mnuVentas.Visible = canCarrito || canFacturar;
 
-            if (canGestionFamilias)
-            {
-                string btnFamilias = IdiomaManager.GetInstance().GetTexto(this.Name, "btnMenuFamilias");
-                AgregarBoton("📁  " + btnFamilias, ref y, AbrirGestionFamilias);
-            }
+            // "Usuario" (idioma, contraseña, sesión) queda siempre visible.
+        }
 
+        private void AbrirMaestroProductos(object sender, EventArgs e)
+        {
+            frmMaestroProductos frm = new frmMaestroProductos();
+            frm.ShowDialog();
+        }
 
-            if (canRespaldo)
-            {
-                string btnMenuRespaldo = IdiomaManager.GetInstance().GetTexto(this.Name, "btnMenuRespaldo");
-                AgregarBoton("📁" + btnMenuRespaldo, ref y, AbrirGestionRespaldo);
-            }
+        private void AbrirMaestroClientes(object sender, EventArgs e)
+        {
+            frmMaestroClientes frm = new frmMaestroClientes();
+            frm.ShowDialog();
+        }
 
-            string segConfig = IdiomaManager.GetInstance().GetTexto(this.Name, "segConfiguracion");
-            string btnIdioma = IdiomaManager.GetInstance().GetTexto(this.Name, "btnCambiarIdioma");
-            string btnContrasena = IdiomaManager.GetInstance().GetTexto(this.Name, "btnCambiarContrasena");
-            string btnPerfiles = IdiomaManager.GetInstance().GetTexto(this.Name, "btnMenuPerfiles");
-            string btnGestionFamilia = IdiomaManager.GetInstance().GetTexto(this.Name, "btnMenuFamilias");
-            string btnRespaldo = IdiomaManager.GetInstance().GetTexto(this.Name, "btnMenuRespaldo");
+        private void AbrirCarrito(object sender, EventArgs e)
+        {
+            frmCargarCarrito frm = new frmCargarCarrito();
+            frm.ShowDialog();
+        }
 
-
-
-            AgregarSeparador(segConfig, ref y);
-            AgregarBoton("🌐  " + btnIdioma, ref y, AbrirCambiarIdioma);
-            AgregarBoton("🔑 " + btnContrasena, ref y,  AbrirCambiarContraseña);
-
-
-            
-            string segSesion = IdiomaManager.GetInstance().GetTexto(this.Name, "segSesion");
-            string btnLogOut = IdiomaManager.GetInstance().GetTexto(this.Name, "btnCerrarSesion");
-            string btnReLog = IdiomaManager.GetInstance().GetTexto(this.Name, "btnIniciarSesion");
-
-            AgregarSeparador(segSesion, ref y);
-            AgregarBoton(btnLogOut, ref y, CerrarSesion, esLogout: true);
-            AgregarBoton("🔄  " + btnReLog, ref y, ReLogin);
-
-            
-
+        private void AbrirFacturar(object sender, EventArgs e)
+        {
+            frmRegistrarFactura frm = new frmRegistrarFactura();
+            frm.ShowDialog();
         }
 
         private void AbrirGestionRespaldo(object sender, EventArgs e)
@@ -166,39 +137,31 @@ namespace Proyecto_IS
 
         private void ReLogin(object sender, EventArgs e)
         {
-            
             if (SessionManager_65RD.Instancia.UsuarioLogueado != null)
             {
-                
                 string msgCuerpo = IdiomaManager.GetInstance().GetTexto(this.Name, "msgSesionActivaCuerpo");
                 string msgTitulo = IdiomaManager.GetInstance().GetTexto(this.Name, "msgSesionActivaTitulo");
 
-                
                 DialogResult advertencia = MessageBox.Show(msgCuerpo, msgTitulo, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                
                 if (advertencia == DialogResult.No)
                 {
                     return;
                 }
 
-                
                 int idUsuarioActual = SessionManager_65RD.Instancia.UsuarioLogueado.Id;
                 new BitacoraBLL_65RD().RegistrarEvento(idUsuarioActual, "Usuarios", "Logout", 1, "Cierre de sesión por cambio de usuario (ReLogin)");
 
                 SessionManager_65RD.Instancia.CerrarSesion();
             }
 
-            
             frmLogin login = new frmLogin();
             login.EsReLogin = true;
             login.Show();
             this.Hide();
 
-            
             login.FormClosed += (s, args) =>
             {
-                
                 if (SessionManager_65RD.Instancia.UsuarioLogueado != null)
                 {
                     this.Show();
@@ -210,59 +173,6 @@ namespace Proyecto_IS
             };
         }
 
-
-        private void AgregarSeparador(string titulo, ref int y)
-        {
-            y += 10;
-            var lbl = new Label
-            {
-                Text = titulo,
-                Left = 15,
-                Top = y,
-                Width = panelMenu.Width - 30,
-                Height = 20,
-                Font = new Font("Segoe UI", 8f, FontStyle.Bold),
-                ForeColor = Color.Gray,
-                BackColor = Color.Transparent,
-                TextAlign = ContentAlignment.BottomLeft,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
-            };
-            panelMenu.Controls.Add(lbl);
-            y += lbl.Height + 5;
-        }
-
-        private void AgregarBoton(string texto, ref int y, EventHandler accion, bool esLogout = false)
-        {
-            var btn = new Button
-            {
-                Text = texto,
-                Left = 10,
-                Top = y,
-                Width = panelMenu.Width - 20,
-                Height = 42,
-                FlatStyle = FlatStyle.Flat,
-                BackColor = esLogout ? ColorAccent : ColorMenu,
-                ForeColor = esLogout ? Color.White : ColorTextoPrincipal,
-                Font = esLogout ? new Font("Segoe UI", 9.5f, FontStyle.Bold) : new Font("Segoe UI", 10f, FontStyle.Regular),
-                TextAlign = esLogout ? ContentAlignment.MiddleCenter : ContentAlignment.MiddleLeft,
-                Padding = esLogout ? new Padding(0) : new Padding(10, 0, 0, 0),
-                Cursor = Cursors.Hand,
-                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
-            };
-
-            btn.FlatAppearance.BorderSize = esLogout ? 0 : 1;
-            btn.FlatAppearance.BorderColor = esLogout ? ColorAccent : Color.LightGray;
-
-            
-            btn.MouseEnter += (s, e) => btn.BackColor = esLogout ? Color.FromArgb(100, 75, 230) : ColorHover;
-            btn.MouseLeave += (s, e) => btn.BackColor = esLogout ? ColorAccent : ColorMenu;
-
-            btn.Click += accion;
-            panelMenu.Controls.Add(btn);
-            y += btn.Height + 8;
-        }
-
-        
         private void ActualizarBienvenida()
         {
             string saludo = IdiomaManager.GetInstance().GetTexto(this.Name, "lblHola");
@@ -274,37 +184,24 @@ namespace Proyecto_IS
             lblRol.Text = _rol == "Administrador" ? rolAdmin : rolBasico;
         }
 
-        
         private void AbrirGestionUsuarios(object sender, EventArgs e)
         {
             frmGestionUsuarios frmGestion = new frmGestionUsuarios();
-            frmGestion.ShowDialog(); 
+            frmGestion.ShowDialog();
         }
 
         private void AbrirBitacora(object sender, EventArgs e)
         {
-            
-            frmBitacoraEventos formBitacora = new frmBitacoraEventos();
-
-            
-            formBitacora.ShowDialog();
+            frmBitacoraEventos frmBitacora = new frmBitacoraEventos();
+            frmBitacora.ShowDialog();
         }
 
         private void AbrirCambiarIdioma(object sender, EventArgs e)
         {
-
-            panelContenido.Controls.Clear();
-
             frmIdioma frmIdioma = new frmIdioma();
-            frmIdioma.TopLevel = false;
-            frmIdioma.FormBorderStyle = FormBorderStyle.None;
-            frmIdioma.Dock = DockStyle.Fill;
-
-            panelContenido.Controls.Add(frmIdioma);
-            panelContenido.Tag = frmIdioma;
-            frmIdioma.Show();
-        }
+            frmIdioma.ShowDialog();
         
+        }
 
         private void CerrarSesion(object sender, EventArgs e)
         {
@@ -314,7 +211,6 @@ namespace Proyecto_IS
             var res = MessageBox.Show(msgCuerpo, msgTitulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
-                
                 if (SessionManager_65RD.Instancia.UsuarioLogueado != null)
                 {
                     int idUsuarioActual = SessionManager_65RD.Instancia.UsuarioLogueado.Id;
@@ -330,12 +226,11 @@ namespace Proyecto_IS
             }
         }
 
-        
         private void MostrarContenido(string titulo, string descripcion)
         {
-            lblContenidoTitulo.Text = titulo;
-            lblContenidoDetalle.Text = descripcion;
+           
         }
+
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             IdiomaManager.GetInstance().RemoveObserver(this);
@@ -346,11 +241,9 @@ namespace Proyecto_IS
             this.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblTituloVentana");
             if (lblAppNombre != null) lblAppNombre.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblMenuHeader");
 
-            if (lblContenidoTitulo != null) lblContenidoTitulo.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblPanelInicioTitulo");
-            if (lblContenidoDetalle != null) lblContenidoDetalle.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblPanelInicioDetalle");
 
             ActualizarBienvenida();
-            ConstruirMenu();
+            ConfigurarMenu();
         }
 
         private void AbrirGestionRoles(object sender, EventArgs e)
@@ -364,18 +257,85 @@ namespace Proyecto_IS
             frmGestionFamilias frm = new frmGestionFamilias();
             frm.ShowDialog();
         }
+
         private void AbrirCambiarContraseña(object sender, EventArgs e)
         {
             frmCambioContraseña frm = new frmCambioContraseña();
             frm.ShowDialog();
-
-           
         }
+
         private void panelContenido_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+
+        private void mnuCarrito_Click_1(object sender, EventArgs e)
+        {
+            AbrirCarrito(sender, e);
+        }
+
+        private void mnuGestionUsuarios_Click_1(object sender, EventArgs e)
+        {
+            AbrirGestionUsuarios(sender, e);
+        }
+
+        private void mnuBitacora_Click_1(object sender, EventArgs e)
+        {
+            AbrirBitacora(sender, e);
+        }
+
+        private void mnuGestionPerfiles_Click(object sender, EventArgs e)
+        {
+            AbrirGestionRoles(sender, e);
+        }
+
+        private void mnuGestionFamilias_Click(object sender, EventArgs e)
+        {
+            AbrirGestionFamilias(sender, e);
+        }
+
+        private void mnuGestionRespaldo_Click(object sender, EventArgs e)
+        {
+            AbrirGestionRespaldo(sender, e);
+        }
+
+        private void mnuMaestroProductos_Click(object sender, EventArgs e)
+        {
+            AbrirMaestroProductos(sender, e);
+        }
+
+        private void mnuMaestroClientes_Click(object sender, EventArgs e)
+        {
+            AbrirMaestroClientes(sender, e);
+        }
+
+        private void mnuFacturar_Click_1(object sender, EventArgs e)
+        {
+            AbrirFacturar(sender, e);
+        }
+
+        private void mnuCambiarIdioma_Click(object sender, EventArgs e)
+        {
+            AbrirCambiarIdioma(sender, e);
+        }
+
+        private void mnuCambiarContrasena_Click_1(object sender, EventArgs e)
+        {
+            AbrirCambiarContraseña(sender, e);
+        }
+
+        private void mnuCerrarSesion_Click_1(object sender, EventArgs e)
+        {
+            CerrarSesion(sender, e);
+        }
+
+        private void mnuIniciarSesion_Click_1(object sender, EventArgs e)
+        {
+            ReLogin(sender, e);
 
         }
     }
-
-
 }
+
+
+

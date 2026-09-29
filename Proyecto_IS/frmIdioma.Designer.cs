@@ -37,9 +37,9 @@
             // cmbIdiomas
             // 
             this.cmbIdiomas.FormattingEnabled = true;
-            this.cmbIdiomas.Location = new System.Drawing.Point(119, 133);
+            this.cmbIdiomas.Location = new System.Drawing.Point(125, 162);
             this.cmbIdiomas.Name = "cmbIdiomas";
-            this.cmbIdiomas.Size = new System.Drawing.Size(121, 24);
+            this.cmbIdiomas.Size = new System.Drawing.Size(142, 24);
             this.cmbIdiomas.TabIndex = 0;
             // 
             // lblTituloPantalla
@@ -47,7 +47,7 @@
             this.lblTituloPantalla.AutoSize = true;
             this.lblTituloPantalla.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloPantalla.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lblTituloPantalla.Location = new System.Drawing.Point(72, 28);
+            this.lblTituloPantalla.Location = new System.Drawing.Point(22, 43);
             this.lblTituloPantalla.Name = "lblTituloPantalla";
             this.lblTituloPantalla.Size = new System.Drawing.Size(316, 46);
             this.lblTituloPantalla.TabIndex = 41;
@@ -61,7 +61,7 @@
             this.btnGuardarIdioma.ForeColor = System.Drawing.Color.White;
             this.btnGuardarIdioma.Location = new System.Drawing.Point(125, 206);
             this.btnGuardarIdioma.Name = "btnGuardarIdioma";
-            this.btnGuardarIdioma.Size = new System.Drawing.Size(115, 35);
+            this.btnGuardarIdioma.Size = new System.Drawing.Size(142, 30);
             this.btnGuardarIdioma.TabIndex = 54;
             this.btnGuardarIdioma.Text = "GUARDAR";
             this.btnGuardarIdioma.UseVisualStyleBackColor = false;
@@ -72,7 +72,7 @@
             this.lblSeleccionarIdioma.AutoSize = true;
             this.lblSeleccionarIdioma.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeleccionarIdioma.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblSeleccionarIdioma.Location = new System.Drawing.Point(36, 89);
+            this.lblSeleccionarIdioma.Location = new System.Drawing.Point(24, 89);
             this.lblSeleccionarIdioma.Name = "lblSeleccionarIdioma";
             this.lblSeleccionarIdioma.Size = new System.Drawing.Size(151, 32);
             this.lblSeleccionarIdioma.TabIndex = 55;

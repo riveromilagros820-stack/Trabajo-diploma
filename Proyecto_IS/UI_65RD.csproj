@@ -67,6 +67,18 @@
     <Compile Include="frmCambioContraseña.Designer.cs">
       <DependentUpon>frmCambioContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCargarCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargarCarrito.Designer.cs">
+      <DependentUpon>frmCargarCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCobrarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCobrarVenta.Designer.cs">
+      <DependentUpon>frmCobrarVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestionFamilias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,11 +115,41 @@
     <Compile Include="frmGestionUsuarios.Designer.cs">
       <DependentUpon>frmGestionUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMaestroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaestroClientes.Designer.cs">
+      <DependentUpon>frmMaestroClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaestroProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaestroProductos.Designer.cs">
+      <DependentUpon>frmMaestroProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.Designer.cs">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarFactura.Designer.cs">
+      <DependentUpon>frmRegistrarFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReparacionDV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReparacionDV.Designer.cs">
       <DependentUpon>frmReparacionDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeleccionarProducto.Designer.cs">
+      <DependentUpon>frmSeleccionarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -122,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCambioContraseña.resx">
       <DependentUpon>frmCambioContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCargarCarrito.resx">
+      <DependentUpon>frmCargarCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCobrarVenta.resx">
+      <DependentUpon>frmCobrarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionFamilias.resx">
       <DependentUpon>frmGestionFamilias.cs</DependentUpon>
@@ -141,8 +189,17 @@
     <EmbeddedResource Include="frmGestionUsuarios.resx">
       <DependentUpon>frmGestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarCliente.resx">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarFactura.resx">
+      <DependentUpon>frmRegistrarFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReparacionDV.resx">
       <DependentUpon>frmReparacionDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionarProducto.resx">
+      <DependentUpon>frmSeleccionarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -171,6 +228,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BE\BE_16MR.csproj">
+      <Project>{64190d17-1668-411d-ada0-ef07af03f817}</Project>
+      <Name>BE_16MR</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL_65RD.csproj">
       <Project>{d979b86b-199c-4329-888c-786c38e94f21}</Project>
       <Name>BLL_65RD</Name>

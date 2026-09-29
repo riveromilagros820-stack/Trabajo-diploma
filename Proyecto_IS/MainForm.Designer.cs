@@ -5,14 +5,9 @@ namespace Proyecto_IS
     partial class MainForm
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panelContenido;
-        private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Label lblAppNombre;
         private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Label lblContenidoTitulo;
-        private System.Windows.Forms.Label lblContenidoDetalle;
 
         protected override void Dispose(bool disposing)
         {
@@ -22,46 +17,43 @@ namespace Proyecto_IS
 
         private void InitializeComponent()
         {
-            this.panelHeader = new System.Windows.Forms.Panel();
             this.lblAppNombre = new System.Windows.Forms.Label();
-            this.panelMenu = new System.Windows.Forms.Panel();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblBienvenida = new System.Windows.Forms.Label();
-            this.panelContenido = new System.Windows.Forms.Panel();
-            this.lblContenidoDetalle = new System.Windows.Forms.Label();
-            this.lblContenidoTitulo = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnuAdministracion = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuGestionUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBitacora = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuGestionPerfiles = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuGestionFamilias = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuGestionRespaldo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMaestros = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMaestroProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMaestroClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuVentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCarrito = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFacturar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuUsuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCambiarIdioma = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCambiarContrasena = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuIniciarSesion = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.menuStrip1.SuspendLayout();
             this.panelHeader.SuspendLayout();
-            this.panelContenido.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelHeader.Controls.Add(this.lblAppNombre);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(900, 60);
-            this.panelHeader.TabIndex = 2;
             // 
             // lblAppNombre
             // 
             this.lblAppNombre.AutoSize = true;
             this.lblAppNombre.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold);
-            this.lblAppNombre.Location = new System.Drawing.Point(20, 15);
+            this.lblAppNombre.Location = new System.Drawing.Point(430, 563);
             this.lblAppNombre.Name = "lblAppNombre";
-            this.lblAppNombre.Size = new System.Drawing.Size(94, 30);
+            this.lblAppNombre.Size = new System.Drawing.Size(208, 37);
             this.lblAppNombre.TabIndex = 0;
-            this.lblAppNombre.Text = "TITULO";
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 60);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 490);
-            this.panelMenu.TabIndex = 1;
+            this.lblAppNombre.Text = "BIENVENIDO!!";
             // 
             // lblRol
             // 
@@ -84,53 +76,214 @@ namespace Proyecto_IS
             this.lblBienvenida.TabIndex = 0;
             this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panelContenido
+            // menuStrip1
             // 
-            this.panelContenido.Controls.Add(this.lblContenidoDetalle);
-            this.panelContenido.Controls.Add(this.lblContenidoTitulo);
-            this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenido.Location = new System.Drawing.Point(220, 60);
-            this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Padding = new System.Windows.Forms.Padding(40);
-            this.panelContenido.Size = new System.Drawing.Size(680, 490);
-            this.panelContenido.TabIndex = 0;
-            this.panelContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenido_Paint);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuAdministracion,
+            this.mnuMaestros,
+            this.mnuVentas,
+            this.mnuUsuario,
+            this.reportesToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1104, 28);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // lblContenidoDetalle
+            // mnuAdministracion
             // 
-            this.lblContenidoDetalle.AutoSize = true;
-            this.lblContenidoDetalle.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblContenidoDetalle.Location = new System.Drawing.Point(45, 90);
-            this.lblContenidoDetalle.Name = "lblContenidoDetalle";
-            this.lblContenidoDetalle.Size = new System.Drawing.Size(376, 20);
-            this.lblContenidoDetalle.TabIndex = 0;
-            this.lblContenidoDetalle.Text = "Seleccione una opción del menú lateral para comenzar.";
+            this.mnuAdministracion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuGestionUsuarios,
+            this.mnuBitacora,
+            this.mnuGestionPerfiles,
+            this.mnuGestionFamilias,
+            this.mnuGestionRespaldo});
+            this.mnuAdministracion.Name = "mnuAdministracion";
+            this.mnuAdministracion.Size = new System.Drawing.Size(118, 24);
+            this.mnuAdministracion.Text = "Administrador";
             // 
-            // lblContenidoTitulo
+            // mnuGestionUsuarios
             // 
-            this.lblContenidoTitulo.AutoSize = true;
-            this.lblContenidoTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblContenidoTitulo.Location = new System.Drawing.Point(40, 40);
-            this.lblContenidoTitulo.Name = "lblContenidoTitulo";
-            this.lblContenidoTitulo.Size = new System.Drawing.Size(204, 37);
-            this.lblContenidoTitulo.TabIndex = 1;
-            this.lblContenidoTitulo.Text = "Panel de Inicio";
+            this.mnuGestionUsuarios.Name = "mnuGestionUsuarios";
+            this.mnuGestionUsuarios.Size = new System.Drawing.Size(224, 26);
+            this.mnuGestionUsuarios.Text = "Gestion Usuarios";
+            this.mnuGestionUsuarios.Click += new System.EventHandler(this.mnuGestionUsuarios_Click_1);
+            // 
+            // mnuBitacora
+            // 
+            this.mnuBitacora.Name = "mnuBitacora";
+            this.mnuBitacora.Size = new System.Drawing.Size(224, 26);
+            this.mnuBitacora.Text = "Bitacora eventos";
+            this.mnuBitacora.Click += new System.EventHandler(this.mnuBitacora_Click_1);
+            // 
+            // mnuGestionPerfiles
+            // 
+            this.mnuGestionPerfiles.Name = "mnuGestionPerfiles";
+            this.mnuGestionPerfiles.Size = new System.Drawing.Size(224, 26);
+            this.mnuGestionPerfiles.Text = "Gestion Perfiles";
+            this.mnuGestionPerfiles.Click += new System.EventHandler(this.mnuGestionPerfiles_Click);
+            // 
+            // mnuGestionFamilias
+            // 
+            this.mnuGestionFamilias.Name = "mnuGestionFamilias";
+            this.mnuGestionFamilias.Size = new System.Drawing.Size(224, 26);
+            this.mnuGestionFamilias.Text = "Gestion Familias";
+            this.mnuGestionFamilias.Click += new System.EventHandler(this.mnuGestionFamilias_Click);
+            // 
+            // mnuGestionRespaldo
+            // 
+            this.mnuGestionRespaldo.Name = "mnuGestionRespaldo";
+            this.mnuGestionRespaldo.Size = new System.Drawing.Size(224, 26);
+            this.mnuGestionRespaldo.Text = "Gestion Respaldo";
+            this.mnuGestionRespaldo.Click += new System.EventHandler(this.mnuGestionRespaldo_Click);
+            // 
+            // mnuMaestros
+            // 
+            this.mnuMaestros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuMaestroProductos,
+            this.mnuMaestroClientes});
+            this.mnuMaestros.Name = "mnuMaestros";
+            this.mnuMaestros.Size = new System.Drawing.Size(77, 24);
+            this.mnuMaestros.Text = "Maestro";
+            // 
+            // mnuMaestroProductos
+            // 
+            this.mnuMaestroProductos.Name = "mnuMaestroProductos";
+            this.mnuMaestroProductos.Size = new System.Drawing.Size(158, 26);
+            this.mnuMaestroProductos.Text = "Productos";
+            this.mnuMaestroProductos.Click += new System.EventHandler(this.mnuMaestroProductos_Click);
+            // 
+            // mnuMaestroClientes
+            // 
+            this.mnuMaestroClientes.Name = "mnuMaestroClientes";
+            this.mnuMaestroClientes.Size = new System.Drawing.Size(158, 26);
+            this.mnuMaestroClientes.Text = "Clientes";
+            this.mnuMaestroClientes.Click += new System.EventHandler(this.mnuMaestroClientes_Click);
+            // 
+            // mnuVentas
+            // 
+            this.mnuVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuCarrito,
+            this.mnuFacturar});
+            this.mnuVentas.Name = "mnuVentas";
+            this.mnuVentas.Size = new System.Drawing.Size(66, 24);
+            this.mnuVentas.Text = "Ventas";
+            // 
+            // mnuCarrito
+            // 
+            this.mnuCarrito.Name = "mnuCarrito";
+            this.mnuCarrito.Size = new System.Drawing.Size(144, 26);
+            this.mnuCarrito.Text = "Carrito";
+            this.mnuCarrito.Click += new System.EventHandler(this.mnuCarrito_Click_1);
+            // 
+            // mnuFacturar
+            // 
+            this.mnuFacturar.Name = "mnuFacturar";
+            this.mnuFacturar.Size = new System.Drawing.Size(144, 26);
+            this.mnuFacturar.Text = "Facturar";
+            this.mnuFacturar.Click += new System.EventHandler(this.mnuFacturar_Click_1);
+            // 
+            // mnuUsuario
+            // 
+            this.mnuUsuario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuCambiarIdioma,
+            this.mnuCambiarContrasena,
+            this.mnuCerrarSesion,
+            this.mnuIniciarSesion});
+            this.mnuUsuario.Name = "mnuUsuario";
+            this.mnuUsuario.Size = new System.Drawing.Size(73, 24);
+            this.mnuUsuario.Text = "Usuario";
+            // 
+            // mnuCambiarIdioma
+            // 
+            this.mnuCambiarIdioma.Name = "mnuCambiarIdioma";
+            this.mnuCambiarIdioma.Size = new System.Drawing.Size(226, 26);
+            this.mnuCambiarIdioma.Text = "Cambiar Idioma";
+            this.mnuCambiarIdioma.Click += new System.EventHandler(this.mnuCambiarIdioma_Click);
+            // 
+            // mnuCambiarContrasena
+            // 
+            this.mnuCambiarContrasena.Name = "mnuCambiarContrasena";
+            this.mnuCambiarContrasena.Size = new System.Drawing.Size(226, 26);
+            this.mnuCambiarContrasena.Text = "Cambiar Contraseña";
+            this.mnuCambiarContrasena.Click += new System.EventHandler(this.mnuCambiarContrasena_Click_1);
+            // 
+            // mnuCerrarSesion
+            // 
+            this.mnuCerrarSesion.Name = "mnuCerrarSesion";
+            this.mnuCerrarSesion.Size = new System.Drawing.Size(226, 26);
+            this.mnuCerrarSesion.Text = "Cerrar Sesion";
+            this.mnuCerrarSesion.Click += new System.EventHandler(this.mnuCerrarSesion_Click_1);
+            // 
+            // mnuIniciarSesion
+            // 
+            this.mnuIniciarSesion.Name = "mnuIniciarSesion";
+            this.mnuIniciarSesion.Size = new System.Drawing.Size(226, 26);
+            this.mnuIniciarSesion.Text = "Iniciar sesion";
+            this.mnuIniciarSesion.Click += new System.EventHandler(this.mnuIniciarSesion_Click_1);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelHeader.Controls.Add(this.menuStrip1);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1106, 132);
+            this.panelHeader.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(900, 550);
-            this.Controls.Add(this.panelContenido);
-            this.Controls.Add(this.panelMenu);
+            this.ClientSize = new System.Drawing.Size(1106, 644);
+            this.Controls.Add(this.lblAppNombre);
             this.Controls.Add(this.panelHeader);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            this.panelContenido.ResumeLayout(false);
-            this.panelContenido.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
+
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem mnuAdministracion;
+        private ToolStripMenuItem mnuGestionUsuarios;
+        private ToolStripMenuItem mnuBitacora;
+        private ToolStripMenuItem mnuGestionPerfiles;
+        private ToolStripMenuItem mnuGestionFamilias;
+        private ToolStripMenuItem mnuGestionRespaldo;
+        private ToolStripMenuItem mnuMaestros;
+        private ToolStripMenuItem mnuMaestroProductos;
+        private ToolStripMenuItem mnuMaestroClientes;
+        private ToolStripMenuItem mnuVentas;
+        private ToolStripMenuItem mnuCarrito;
+        private ToolStripMenuItem mnuFacturar;
+        private ToolStripMenuItem mnuUsuario;
+        private ToolStripMenuItem mnuCambiarIdioma;
+        private ToolStripMenuItem mnuCambiarContrasena;
+        private ToolStripMenuItem mnuCerrarSesion;
+        private ToolStripMenuItem mnuIniciarSesion;
+        private ToolStripMenuItem reportesToolStripMenuItem;
+        private ToolStripMenuItem ayudaToolStripMenuItem;
+        private Panel panelHeader;
     }
 }

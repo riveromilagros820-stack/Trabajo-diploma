@@ -50,11 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Carrito_16MR.cs" />
+    <Compile Include="Cliente_16MR.cs" />
+    <Compile Include="Factura_16MR.cs" />
+    <Compile Include="LineaCarrito_16MR.cs" />
+    <Compile Include="LineaFactura_16MR.cs" />
+    <Compile Include="Producto_16MR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Servicios\Servicios_65RD.csproj">
+      <Project>{7d5e1d3f-c1e0-404d-8c41-9ccb5b5b2081}</Project>
+      <Name>Servicios_65RD</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

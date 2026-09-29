@@ -95,6 +95,33 @@ namespace DAL
 
             return EjecutarConsultaComoMatriz(query);
         }
+        public IList<IList<string>> ObtenerDatosTablaCarrito()
+        {
+            string cs = @"Data Source=.;Initial Catalog=proyecto_ingenieria;Integrated Security=True";
+            var filas = new List<IList<string>>();
+
+            // Solo columnas que no cambian nunca: "Estado" pasa a Facturado
+            // al cobrar, y eso rompería el DV sin que nadie haya manipulado nada.
+            using (SqlConnection con = new SqlConnection(cs))
+            using (SqlCommand cmd = new SqlCommand(
+                "SELECT Id, ClienteId, VendedorId FROM Carrito ORDER BY Id", con))
+            {
+                con.Open();
+                using (SqlDataReader r = cmd.ExecuteReader())
+                {
+                    while (r.Read())
+                    {
+                        filas.Add(new List<string>
+                        {
+                            r["Id"].ToString(),
+                            r["ClienteId"].ToString(),
+                            r["VendedorId"].ToString()
+                        });
+                    }
+                }
+            }
+            return filas;
+        }
 
 
         private IList<IList<string>> EjecutarConsultaComoMatriz(string query)
@@ -204,6 +231,34 @@ namespace DAL
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
+        }
+
+        public IList<IList<string>> ObtenerDatosTablaFactura()
+        {
+            string cs = @"Data Source=.;Initial Catalog=proyecto_ingenieria;Integrated Security=True";
+            var filas = new List<IList<string>>();
+
+            using (SqlConnection con = new SqlConnection(cs))
+            using (SqlCommand cmd = new SqlCommand(
+                "SELECT Id, CarritoId, CajeroId, NroFactura, Total FROM Factura ORDER BY Id", con))
+            {
+                con.Open();
+                using (SqlDataReader r = cmd.ExecuteReader())
+                {
+                    while (r.Read())
+                    {
+                        filas.Add(new List<string>
+                        {
+                            r["Id"].ToString(),
+                            r["CarritoId"].ToString(),
+                            r["CajeroId"].ToString(),
+                            r["NroFactura"].ToString(),
+                            r["Total"].ToString()
+                        });
+                    }
+                }
+            }
+            return filas;
         }
     }
 }

@@ -43,7 +43,7 @@ namespace Proyecto_IS
         {
 
             cmbModulo.Items.Clear();
-            cmbModulo.Items.AddRange(new string[] { "Todos", "Usuarios", "Perfiles", "Familias" });
+            cmbModulo.Items.AddRange(new string[] { "Todos", "Usuarios", "Perfiles", "Familias" , "Ventas"});
             cmbModulo.SelectedIndex = 0;
 
             cmbCriticidad.Items.Clear();
@@ -94,6 +94,16 @@ namespace Proyecto_IS
                         "Crear Familia",
                         "Modificar Familia",
                         "Eliminar Familia"
+                    });
+                    break;
+                case "Ventas":
+                    cmbEvento.Items.AddRange(new string[]
+                    {
+                        "Todos",
+                       "Carrito cargado",
+                       "Cliente registrado",
+                        "Pago confirmado",
+                        "Pago rechazado"
                     });
                     break;
 

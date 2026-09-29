@@ -2,6 +2,7 @@
 using Servicios;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,9 @@ namespace BLL
             "Perfil_Permiso",
             "Perfil_Familia",
             "Familia_Permiso",
-            "Familia_Familia"
+            "Familia_Familia",
+            "Carrito",
+            "Factura"
         };
 
 
@@ -179,12 +182,30 @@ namespace BLL
                     filas = _dvDAL.ObtenerDatosTablaFamiliaFamilia();
                     cantidadColumnas = 2; // IdFamiliaPadre, IdFamiliaHijo
                     break;
+                case "Carrito":
+                    filas = _dvDAL.ObtenerDatosTablaCarrito();
+                    cantidadColumnas = 3; // Id, ClienteId, VendedorId
+                    break;
+                case "Factura":
+                    filas = _dvDAL.ObtenerDatosTablaFactura();
+                    cantidadColumnas = 5; // Id, CarritoId, CajeroId, NroFactura, Total
+                    break;
 
                 default:
                     return null; 
             }
 
             return CalculadorDV_65RD.Calcular(nombreTabla, filas, cantidadColumnas);
+        }
+        public void ActualizarDVFactura()
+        {
+            GenerarYGuardarDV("Factura");
+        }
+
+       
+        public void ActualizarDVCarrito()
+        {
+            GenerarYGuardarDV("Carrito");
         }
     }
 }

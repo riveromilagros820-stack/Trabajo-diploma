@@ -52,10 +52,14 @@
   <ItemGroup>
     <Compile Include="BackUpRestoreDAL_65RD.cs" />
     <Compile Include="BitacoraDAL_65RD.cs" />
+    <Compile Include="CarritoDAL_16MR.cs" />
+    <Compile Include="ClienteDAL_16MR.cs" />
     <Compile Include="DigitoVerificadorDAL_65RD.cs" />
+    <Compile Include="FacturaDAL_16MR.cs" />
     <Compile Include="FamiliaDAL_65RD.cs" />
     <Compile Include="PerfilDAL_65RD.cs" />
     <Compile Include="PermisoDAL_65RD.cs" />
+    <Compile Include="ProductoDAL_16MR.cs" />
     <Compile Include="UsuarioDAL_65RD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +67,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BE\BE_16MR.csproj">
+      <Project>{64190d17-1668-411d-ada0-ef07af03f817}</Project>
+      <Name>BE_16MR</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Servicios\Servicios_65RD.csproj">
       <Project>{7d5e1d3f-c1e0-404d-8c41-9ccb5b5b2081}</Project>
       <Name>Servicios_65RD</Name>

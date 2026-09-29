@@ -52,14 +52,24 @@
   <ItemGroup>
     <Compile Include="BackUpRestoreBLL_65RD.cs" />
     <Compile Include="BitacoraBLL_65RD.cs" />
+    <Compile Include="CarritoBLL_16MR.cs" />
+    <Compile Include="ClienteBLL_16MR.cs" />
+    <Compile Include="DesSerializarClienteBLL_16MR.cs" />
     <Compile Include="DigitoVerificadorBLL_65RD.cs" />
+    <Compile Include="FacturaBLL_16MR.cs" />
     <Compile Include="FamiliaBLL_65RD.cs" />
     <Compile Include="PerfilBLL_65RD.cs" />
     <Compile Include="PermisoBLL_65RD.cs" />
+    <Compile Include="ProductoBLL_16MR.cs" />
+    <Compile Include="SerializarClienteBLL_16MR.cs" />
     <Compile Include="UsuarioBLL_65RD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BE\BE_16MR.csproj">
+      <Project>{64190d17-1668-411d-ada0-ef07af03f817}</Project>
+      <Name>BE_16MR</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL_65RD.csproj">
       <Project>{bc90b916-27d5-4609-bc37-20eeec19e193}</Project>
       <Name>DAL_65RD</Name>
