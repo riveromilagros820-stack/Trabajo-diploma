@@ -45,7 +45,7 @@
             // 
             // btnLimpiarPerfil
             // 
-            this.btnLimpiarPerfil.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLimpiarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnLimpiarPerfil.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarPerfil.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarPerfil.Location = new System.Drawing.Point(1172, 387);
@@ -71,8 +71,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(1004, 174);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.label1.Location = new System.Drawing.Point(1004, 164);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 32);
@@ -99,8 +99,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(978, 130);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.label3.Location = new System.Drawing.Point(978, 120);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 32);
@@ -109,7 +109,7 @@
             // 
             // btnGuardarPerfil
             // 
-            this.btnGuardarPerfil.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnGuardarPerfil.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarPerfil.ForeColor = System.Drawing.Color.White;
             this.btnGuardarPerfil.Location = new System.Drawing.Point(1172, 520);
@@ -123,7 +123,7 @@
             // 
             // btnQuitarPermiso
             // 
-            this.btnQuitarPermiso.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnQuitarPermiso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnQuitarPermiso.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarPermiso.ForeColor = System.Drawing.Color.White;
             this.btnQuitarPermiso.Location = new System.Drawing.Point(1172, 325);
@@ -137,7 +137,7 @@
             // 
             // btnAsignarPermiso
             // 
-            this.btnAsignarPermiso.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAsignarPermiso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnAsignarPermiso.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignarPermiso.ForeColor = System.Drawing.Color.White;
             this.btnAsignarPermiso.Location = new System.Drawing.Point(1172, 257);
@@ -151,7 +151,7 @@
             // 
             // btnEliminarPerfil
             // 
-            this.btnEliminarPerfil.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEliminarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnEliminarPerfil.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarPerfil.ForeColor = System.Drawing.Color.White;
             this.btnEliminarPerfil.Location = new System.Drawing.Point(1172, 455);

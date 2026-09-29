@@ -34,7 +34,6 @@ namespace Proyecto_IS
         public AccionReparacion AccionElegida { get; private set; } = AccionReparacion.Ninguna;
 
 
-
         private void ConstruirInterfaz()
         {
             this.Text = "Inconsistencia detectada — Asistente de Reparación";
@@ -46,9 +45,9 @@ namespace Proyecto_IS
 
             var lblTitulo = new Label
             {
-                Text = "⚠  INCONSISTENCIA EN LA BASE DE DATOS",
+                Text = "INCONSISTENCIA EN LA BASE DE DATOS",
                 Font = new Font("Segoe UI", 14f, FontStyle.Bold),
-                ForeColor = Color.FromArgb(123, 97, 255),
+                ForeColor = Color.FromArgb(206, 110, 117),
                 Location = new Point(20, 20),
                 Size = new Size(570, 35),
                 TextAlign = ContentAlignment.MiddleCenter
@@ -81,11 +80,11 @@ namespace Proyecto_IS
                 Size = new Size(570, 100),
                 Font = new Font("Consolas", 9f),
                 BorderStyle = BorderStyle.FixedSingle,
-                BackColor = Color.FromArgb(235, 238, 245)
+                BackColor = Color.FromArgb(253, 244, 245)
             };
 
             foreach (var t in _tablasConError)
-                lstTablas.Items.Add($"    ✗  {t.NombreTabla}");
+                lstTablas.Items.Add($"    -  {t.NombreTabla}");
 
             var lblElegir = new Label
             {
@@ -102,7 +101,7 @@ namespace Proyecto_IS
                 Location = new Point(20, 315),
                 Size = new Size(570, 42),
                 Font = new Font("Segoe UI", 10f, FontStyle.Bold),
-                BackColor = Color.FromArgb(123, 97, 255),
+                BackColor = Color.FromArgb(206, 110, 117),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
                 Cursor = Cursors.Hand
@@ -116,13 +115,13 @@ namespace Proyecto_IS
                 Location = new Point(20, 365),
                 Size = new Size(570, 42),
                 Font = new Font("Segoe UI", 10f, FontStyle.Bold),
-                BackColor = Color.FromArgb(220, 215, 255),
-                ForeColor = Color.FromArgb(123, 97, 255),
+                BackColor = Color.FromArgb(224, 158, 163),
+                ForeColor = Color.FromArgb(206, 110, 117),
                 FlatStyle = FlatStyle.Flat,
                 Cursor = Cursors.Hand
             };
             btnRestore.FlatAppearance.BorderSize = 1;
-            btnRestore.FlatAppearance.BorderColor = Color.FromArgb(123, 97, 255);
+            btnRestore.FlatAppearance.BorderColor = Color.FromArgb(206, 110, 117);
             btnRestore.Click += BtnRestore_Click;
 
             var btnSalir = new Button
@@ -148,14 +147,6 @@ namespace Proyecto_IS
             });
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  BOTÓN 1 — RECALCULAR
-        //  El profesor: "se fuerza la GENERACIÓN del DV tal como ocurre
-        //  cada vez que se ejecuta una persistencia. Después se limpia
-        //  la pantalla y se vuelve al login para hacer un nuevo acceso.
-        //  No se resuelve la inconsistencia, solo se acepta, se acoge,
-        //  se normaliza."
-        // ─────────────────────────────────────────────────────────────
         private void BtnRecalcular_Click(object sender, EventArgs e)
         {
             var confirmacion = MessageBox.Show(
@@ -197,16 +188,6 @@ namespace Proyecto_IS
             }
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  BOTÓN 2 — RESTORE
-        //  El profesor: "mostrar el GUI asociado al restore de algún
-        //  backup. Debería elegirse el más reciente para perder la menor
-        //  cantidad de datos. Después se limpia la pantalla y se vuelve
-        //  al login."
-        //  El restore real es a nivel SQL Server (fuera del sistema),
-        //  nosotros mostramos las instrucciones y recalculamos el DV
-        //  una vez que el admin indica que ya restauró.
-        // ─────────────────────────────────────────────────────────────
         private void BtnRestore_Click(object sender, EventArgs e)
         {
             using (var frmRestore = new frmGestionRespaldo())
@@ -217,11 +198,7 @@ namespace Proyecto_IS
             this.Close();
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  BOTÓN 3 — SALIR
-        //  El profesor: "se limpia la pantalla, se sale del sistema,
-        //  no se resuelve el problema de la inconsistencia."
-        // ─────────────────────────────────────────────────────────────
+        
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             AccionElegida = AccionReparacion.Salio;
@@ -229,4 +206,6 @@ namespace Proyecto_IS
         }
 
     }
+
 }
+

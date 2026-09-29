@@ -64,7 +64,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
@@ -90,6 +90,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.label3.Location = new System.Drawing.Point(122, 454);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 32);
@@ -110,6 +111,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.label2.Location = new System.Drawing.Point(161, 409);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 32);
@@ -120,7 +122,7 @@
             // 
             this.lblGestionUsuarios.AutoSize = true;
             this.lblGestionUsuarios.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionUsuarios.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.lblGestionUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.lblGestionUsuarios.Location = new System.Drawing.Point(57, 27);
             this.lblGestionUsuarios.Name = "lblGestionUsuarios";
             this.lblGestionUsuarios.Size = new System.Drawing.Size(344, 46);
@@ -130,7 +132,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
@@ -144,7 +146,7 @@
             // 
             // btnHabilitar
             // 
-            this.btnHabilitar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHabilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnHabilitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHabilitar.ForeColor = System.Drawing.Color.White;
@@ -241,7 +243,7 @@
             // 
             // btnAplicar
             // 
-            this.btnAplicar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAplicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnAplicar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAplicar.ForeColor = System.Drawing.Color.White;
@@ -255,7 +257,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
@@ -270,6 +272,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.label4.Location = new System.Drawing.Point(122, 501);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 32);
@@ -290,6 +293,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.label5.Location = new System.Drawing.Point(161, 548);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 32);
@@ -300,6 +304,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.label8.Location = new System.Drawing.Point(144, 601);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 32);
@@ -318,7 +323,7 @@
             // 
             // btnDeshabilitar
             // 
-            this.btnDeshabilitar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDeshabilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnDeshabilitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeshabilitar.ForeColor = System.Drawing.Color.White;
@@ -333,6 +338,7 @@
             // cbtodos
             // 
             this.cbtodos.AutoSize = true;
+            this.cbtodos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.cbtodos.Location = new System.Drawing.Point(518, 409);
             this.cbtodos.Name = "cbtodos";
             this.cbtodos.Size = new System.Drawing.Size(90, 27);
@@ -344,6 +350,7 @@
             // cbactivos
             // 
             this.cbactivos.AutoSize = true;
+            this.cbactivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.cbactivos.Location = new System.Drawing.Point(518, 443);
             this.cbactivos.Name = "cbactivos";
             this.cbactivos.Size = new System.Drawing.Size(104, 27);
@@ -377,7 +384,7 @@
             // 
             // btnDesbloquear
             // 
-            this.btnDesbloquear.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnDesbloquear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnDesbloquear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDesbloquear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesbloquear.ForeColor = System.Drawing.Color.White;

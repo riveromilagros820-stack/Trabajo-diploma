@@ -39,7 +39,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
@@ -56,7 +56,8 @@
             this.cbShowPassword.AutoSize = true;
             this.cbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbShowPassword.Location = new System.Drawing.Point(114, 220);
+            this.cbShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.cbShowPassword.Location = new System.Drawing.Point(104, 252);
             this.cbShowPassword.Name = "cbShowPassword";
             this.cbShowPassword.Size = new System.Drawing.Size(182, 27);
             this.cbShowPassword.TabIndex = 26;
@@ -68,7 +69,7 @@
             // 
             this.txtContraseña.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Location = new System.Drawing.Point(41, 177);
+            this.txtContraseña.Location = new System.Drawing.Point(41, 218);
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(216, 28);
@@ -77,7 +78,8 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(38, 157);
+            this.lblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.lblContraseña.Location = new System.Drawing.Point(37, 192);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(99, 23);
             this.lblContraseña.TabIndex = 24;
@@ -87,7 +89,7 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.ControlLight;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Location = new System.Drawing.Point(41, 105);
+            this.txtUsuario.Location = new System.Drawing.Point(42, 142);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(216, 28);
@@ -96,7 +98,8 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(38, 85);
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.lblUsuario.Location = new System.Drawing.Point(38, 116);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(70, 23);
             this.lblUsuario.TabIndex = 22;
@@ -105,11 +108,11 @@
             // lblTituloVentana
             // 
             this.lblTituloVentana.AutoSize = true;
-            this.lblTituloVentana.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lblTituloVentana.Location = new System.Drawing.Point(100, 46);
+            this.lblTituloVentana.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.lblTituloVentana.Location = new System.Drawing.Point(75, 50);
             this.lblTituloVentana.Name = "lblTituloVentana";
             this.lblTituloVentana.Size = new System.Drawing.Size(137, 23);
-            this.lblTituloVentana.TabIndex = 21;
+            this.lblTituloVentana.TabIndex = 22;
             this.lblTituloVentana.Text = "INICIAR SESIÓN";
             // 
             // frmLogin

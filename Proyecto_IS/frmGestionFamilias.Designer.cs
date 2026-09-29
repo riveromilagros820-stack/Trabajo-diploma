@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.label1.Location = new System.Drawing.Point(968, 198);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -60,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.label2.Location = new System.Drawing.Point(870, 148);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -70,7 +70,7 @@
             // 
             // btnGuardarFamilia
             // 
-            this.btnGuardarFamilia.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardarFamilia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnGuardarFamilia.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarFamilia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarFamilia.Location = new System.Drawing.Point(941, 528);
@@ -84,7 +84,7 @@
             // 
             // btnLimpiarFamilia
             // 
-            this.btnLimpiarFamilia.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLimpiarFamilia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnLimpiarFamilia.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarFamilia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarFamilia.Location = new System.Drawing.Point(941, 474);
@@ -162,7 +162,7 @@
             // 
             // btnEliminarFamilia
             // 
-            this.btnEliminarFamilia.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEliminarFamilia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnEliminarFamilia.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarFamilia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarFamilia.Location = new System.Drawing.Point(941, 408);
@@ -176,7 +176,7 @@
             // 
             // btnAgregarFamilia
             // 
-            this.btnAgregarFamilia.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAgregarFamilia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnAgregarFamilia.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarFamilia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregarFamilia.Location = new System.Drawing.Point(941, 285);
@@ -190,7 +190,7 @@
             // 
             // btnQuitarPermiso
             // 
-            this.btnQuitarPermiso.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnQuitarPermiso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnQuitarPermiso.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarPermiso.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnQuitarPermiso.Location = new System.Drawing.Point(941, 339);

@@ -73,7 +73,7 @@ namespace Proyecto_IS
         public void UpdateIdioma(string idioma)
         {
             this.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "titleForm");
-            lblTituloPantalla.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblTituloPantalla");
+            //lblTituloPantalla.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblTituloPantalla");
             lblSeleccionarIdioma.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblSeleccionarIdioma");
             btnGuardarIdioma.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "btnGuardarIdioma");
         }
@@ -81,6 +81,11 @@ namespace Proyecto_IS
         private void frmIdioma_FormClosed(object sender, FormClosedEventArgs e)
         {
             IdiomaManager.GetInstance().RemoveObserver(this);
+        }
+
+        private void lblSeleccionarIdioma_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

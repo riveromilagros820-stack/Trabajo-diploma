@@ -54,6 +54,7 @@
             // lblConfirmarContraseña
             // 
             this.lblConfirmarContraseña.AutoSize = true;
+            this.lblConfirmarContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.lblConfirmarContraseña.Location = new System.Drawing.Point(35, 330);
             this.lblConfirmarContraseña.Name = "lblConfirmarContraseña";
             this.lblConfirmarContraseña.Size = new System.Drawing.Size(181, 23);
@@ -63,7 +64,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
@@ -80,6 +81,7 @@
             this.cbShowPassword.AutoSize = true;
             this.cbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.cbShowPassword.Location = new System.Drawing.Point(95, 403);
             this.cbShowPassword.Name = "cbShowPassword";
             this.cbShowPassword.Size = new System.Drawing.Size(182, 27);
@@ -101,6 +103,7 @@
             // lblContraseñaNueva
             // 
             this.lblContraseñaNueva.AutoSize = true;
+            this.lblContraseñaNueva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.lblContraseñaNueva.Location = new System.Drawing.Point(34, 251);
             this.lblContraseñaNueva.Name = "lblContraseñaNueva";
             this.lblContraseñaNueva.Size = new System.Drawing.Size(151, 23);
@@ -120,6 +123,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.lblUsuario.Location = new System.Drawing.Point(35, 106);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(70, 23);
@@ -129,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.label1.Location = new System.Drawing.Point(35, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 23);
@@ -139,6 +143,7 @@
             // lblContraseñaActual
             // 
             this.lblContraseñaActual.AutoSize = true;
+            this.lblContraseñaActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.lblContraseñaActual.Location = new System.Drawing.Point(34, 182);
             this.lblContraseñaActual.Name = "lblContraseñaActual";
             this.lblContraseñaActual.Size = new System.Drawing.Size(150, 23);

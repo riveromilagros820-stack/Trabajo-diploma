@@ -5,7 +5,6 @@ namespace Proyecto_IS
     partial class MainForm
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Label lblAppNombre;
         private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.Label lblRol;
 
@@ -17,7 +16,7 @@ namespace Proyecto_IS
 
         private void InitializeComponent()
         {
-            this.lblAppNombre = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lblRol = new System.Windows.Forms.Label();
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -41,19 +40,14 @@ namespace Proyecto_IS
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.lblAppNombre = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.lblRoll = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblAppNombre
-            // 
-            this.lblAppNombre.AutoSize = true;
-            this.lblAppNombre.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold);
-            this.lblAppNombre.Location = new System.Drawing.Point(430, 563);
-            this.lblAppNombre.Name = "lblAppNombre";
-            this.lblAppNombre.Size = new System.Drawing.Size(208, 37);
-            this.lblAppNombre.TabIndex = 0;
-            this.lblAppNombre.Text = "BIENVENIDO!!";
             // 
             // lblRol
             // 
@@ -78,6 +72,7 @@ namespace Proyecto_IS
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuAdministracion,
@@ -88,7 +83,7 @@ namespace Proyecto_IS
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1104, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1234, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -107,35 +102,35 @@ namespace Proyecto_IS
             // mnuGestionUsuarios
             // 
             this.mnuGestionUsuarios.Name = "mnuGestionUsuarios";
-            this.mnuGestionUsuarios.Size = new System.Drawing.Size(224, 26);
+            this.mnuGestionUsuarios.Size = new System.Drawing.Size(208, 26);
             this.mnuGestionUsuarios.Text = "Gestion Usuarios";
             this.mnuGestionUsuarios.Click += new System.EventHandler(this.mnuGestionUsuarios_Click_1);
             // 
             // mnuBitacora
             // 
             this.mnuBitacora.Name = "mnuBitacora";
-            this.mnuBitacora.Size = new System.Drawing.Size(224, 26);
+            this.mnuBitacora.Size = new System.Drawing.Size(208, 26);
             this.mnuBitacora.Text = "Bitacora eventos";
             this.mnuBitacora.Click += new System.EventHandler(this.mnuBitacora_Click_1);
             // 
             // mnuGestionPerfiles
             // 
             this.mnuGestionPerfiles.Name = "mnuGestionPerfiles";
-            this.mnuGestionPerfiles.Size = new System.Drawing.Size(224, 26);
+            this.mnuGestionPerfiles.Size = new System.Drawing.Size(208, 26);
             this.mnuGestionPerfiles.Text = "Gestion Perfiles";
             this.mnuGestionPerfiles.Click += new System.EventHandler(this.mnuGestionPerfiles_Click);
             // 
             // mnuGestionFamilias
             // 
             this.mnuGestionFamilias.Name = "mnuGestionFamilias";
-            this.mnuGestionFamilias.Size = new System.Drawing.Size(224, 26);
+            this.mnuGestionFamilias.Size = new System.Drawing.Size(208, 26);
             this.mnuGestionFamilias.Text = "Gestion Familias";
             this.mnuGestionFamilias.Click += new System.EventHandler(this.mnuGestionFamilias_Click);
             // 
             // mnuGestionRespaldo
             // 
             this.mnuGestionRespaldo.Name = "mnuGestionRespaldo";
-            this.mnuGestionRespaldo.Size = new System.Drawing.Size(224, 26);
+            this.mnuGestionRespaldo.Size = new System.Drawing.Size(208, 26);
             this.mnuGestionRespaldo.Text = "Gestion Respaldo";
             this.mnuGestionRespaldo.Click += new System.EventHandler(this.mnuGestionRespaldo_Click);
             // 
@@ -238,20 +233,70 @@ namespace Proyecto_IS
             // 
             // panelHeader
             // 
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.panelHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelHeader.Controls.Add(this.menuStrip1);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1106, 132);
+            this.panelHeader.Size = new System.Drawing.Size(1236, 77);
             this.panelHeader.TabIndex = 2;
+            // 
+            // lblAppNombre
+            // 
+            this.lblAppNombre.AutoSize = true;
+            this.lblAppNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.lblAppNombre.Location = new System.Drawing.Point(928, 80);
+            this.lblAppNombre.Name = "lblAppNombre";
+            this.lblAppNombre.Size = new System.Drawing.Size(118, 39);
+            this.lblAppNombre.TabIndex = 3;
+            this.lblAppNombre.Text = "MENU";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(213, 144);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(747, 415);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.lblBienvenido.Location = new System.Drawing.Point(41, 622);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(70, 25);
+            this.lblBienvenido.TabIndex = 7;
+            this.lblBienvenido.Text = "label1";
+            // 
+            // lblRoll
+            // 
+            this.lblRoll.AutoSize = true;
+            this.lblRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.lblRoll.Location = new System.Drawing.Point(166, 627);
+            this.lblRoll.Name = "lblRoll";
+            this.lblRoll.Size = new System.Drawing.Size(59, 20);
+            this.lblRoll.TabIndex = 8;
+            this.lblRoll.Text = "label1";
+            this.lblRoll.Click += new System.EventHandler(this.lblRoll_Click);
             // 
             // MainForm
             // 
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1106, 644);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.ClientSize = new System.Drawing.Size(1236, 713);
+            this.Controls.Add(this.lblRoll);
+            this.Controls.Add(this.lblBienvenido);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAppNombre);
             this.Controls.Add(this.panelHeader);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -259,6 +304,7 @@ namespace Proyecto_IS
             this.menuStrip1.PerformLayout();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +331,9 @@ namespace Proyecto_IS
         private ToolStripMenuItem reportesToolStripMenuItem;
         private ToolStripMenuItem ayudaToolStripMenuItem;
         private Panel panelHeader;
+        private Label lblAppNombre;
+        private PictureBox pictureBox1;
+        private Label lblBienvenido;
+        private Label lblRoll;
     }
 }

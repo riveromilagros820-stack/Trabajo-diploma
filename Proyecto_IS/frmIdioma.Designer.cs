@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label lblTituloPantalla;
             this.cmbIdiomas = new System.Windows.Forms.ComboBox();
-            this.lblTituloPantalla = new System.Windows.Forms.Label();
             this.btnGuardarIdioma = new System.Windows.Forms.Button();
             this.lblSeleccionarIdioma = new System.Windows.Forms.Label();
+            lblTituloPantalla = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbIdiomas
@@ -44,18 +45,18 @@
             // 
             // lblTituloPantalla
             // 
-            this.lblTituloPantalla.AutoSize = true;
-            this.lblTituloPantalla.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloPantalla.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.lblTituloPantalla.Location = new System.Drawing.Point(22, 43);
-            this.lblTituloPantalla.Name = "lblTituloPantalla";
-            this.lblTituloPantalla.Size = new System.Drawing.Size(316, 46);
-            this.lblTituloPantalla.TabIndex = 41;
-            this.lblTituloPantalla.Text = "CAMBIAR IDIOMA";
+            lblTituloPantalla.AutoSize = true;
+            lblTituloPantalla.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblTituloPantalla.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            lblTituloPantalla.Location = new System.Drawing.Point(60, 53);
+            lblTituloPantalla.Name = "lblTituloPantalla";
+            lblTituloPantalla.Size = new System.Drawing.Size(316, 46);
+            lblTituloPantalla.TabIndex = 41;
+            lblTituloPantalla.Text = "CAMBIAR IDIOMA";
             // 
             // btnGuardarIdioma
             // 
-            this.btnGuardarIdioma.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
             this.btnGuardarIdioma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarIdioma.ForeColor = System.Drawing.Color.White;
@@ -71,12 +72,13 @@
             // 
             this.lblSeleccionarIdioma.AutoSize = true;
             this.lblSeleccionarIdioma.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeleccionarIdioma.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblSeleccionarIdioma.Location = new System.Drawing.Point(24, 89);
+            this.lblSeleccionarIdioma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(110)))), ((int)(((byte)(117)))));
+            this.lblSeleccionarIdioma.Location = new System.Drawing.Point(29, 109);
             this.lblSeleccionarIdioma.Name = "lblSeleccionarIdioma";
             this.lblSeleccionarIdioma.Size = new System.Drawing.Size(151, 32);
             this.lblSeleccionarIdioma.TabIndex = 55;
             this.lblSeleccionarIdioma.Text = " Seleccionar";
+            this.lblSeleccionarIdioma.Click += new System.EventHandler(this.lblSeleccionarIdioma_Click);
             // 
             // frmIdioma
             // 
@@ -85,7 +87,7 @@
             this.ClientSize = new System.Drawing.Size(489, 338);
             this.Controls.Add(this.lblSeleccionarIdioma);
             this.Controls.Add(this.btnGuardarIdioma);
-            this.Controls.Add(this.lblTituloPantalla);
+            this.Controls.Add(lblTituloPantalla);
             this.Controls.Add(this.cmbIdiomas);
             this.Name = "frmIdioma";
             this.Text = "frmIdioma";
@@ -98,7 +100,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cmbIdiomas;
-        private System.Windows.Forms.Label lblTituloPantalla;
         private System.Windows.Forms.Button btnGuardarIdioma;
         private System.Windows.Forms.Label lblSeleccionarIdioma;
     }

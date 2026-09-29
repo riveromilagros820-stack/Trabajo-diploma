@@ -68,7 +68,7 @@ namespace Proyecto_IS
             // el MenuStrip de arriba). Si no lo estás usando para nada más,
             // lo podés sacar del Designer; si lo dejaste, no molesta.
 
-            lblAppNombre.ForeColor = ColorAccent;
+            
         }
 
 
@@ -176,12 +176,12 @@ namespace Proyecto_IS
         private void ActualizarBienvenida()
         {
             string saludo = IdiomaManager.GetInstance().GetTexto(this.Name, "lblHola");
-            lblBienvenida.Text = $"{saludo}, {_nombre}";
+            lblBienvenido.Text = $"{saludo}, {_nombre}";
 
             string rolAdmin = IdiomaManager.GetInstance().GetTexto(this.Name, "lblRolAdmin");
             string rolBasico = IdiomaManager.GetInstance().GetTexto(this.Name, "lblRolBasico");
 
-            lblRol.Text = _rol == "Administrador" ? rolAdmin : rolBasico;
+            lblRoll.Text = _rol == "Administrador" ? rolAdmin : rolBasico;
         }
 
         private void AbrirGestionUsuarios(object sender, EventArgs e)
@@ -239,7 +239,6 @@ namespace Proyecto_IS
         public void UpdateIdioma(string idioma)
         {
             this.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblTituloVentana");
-            if (lblAppNombre != null) lblAppNombre.Text = IdiomaManager.GetInstance().GetTexto(this.Name, "lblMenuHeader");
 
 
             ActualizarBienvenida();
@@ -332,6 +331,11 @@ namespace Proyecto_IS
         private void mnuIniciarSesion_Click_1(object sender, EventArgs e)
         {
             ReLogin(sender, e);
+
+        }
+
+        private void lblRoll_Click(object sender, EventArgs e)
+        {
 
         }
     }
